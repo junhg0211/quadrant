@@ -26,7 +26,7 @@ body {
   font-weight: bold;
   font-size: 52px;
   background-color: #4fc2b8;
-  padding: 4px;
+  padding: 4px 8px;
   border-radius: 8px;
   color: white;
 }
@@ -36,13 +36,14 @@ body {
   padding: 24px 0;
   flex: 1;
   display: flex;
+  border-radius: 8px;
 }
 
 .article-legend {
   margin-left: 24px;
   background-color: #f7f7f9;
   padding: 12px;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 .legend {
@@ -56,7 +57,7 @@ body {
   flex: 1;
   margin: 0 24px;
   background-color: #f7f7f9;
-  border-radius: 12px;
+  border-radius: 8px;
   display: flex;
   align-items: stretch;
   gap: 12px;
