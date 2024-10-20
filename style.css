@@ -47,8 +47,9 @@ body {
 
 .legend {
   margin: 4px;
-  padding: 2px;
+  padding: 2px 8px;
   border-radius: 4px;
+  text-align: center;
 }
 
 .article-container-horizontal {
