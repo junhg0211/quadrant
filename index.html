@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+    <title>하루나비 노래 사분면</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="top-container" id="top-container">
+        <div class="header-container">
+          <span class="header">하루나비 노래 사분면</span>
+        </div>
+        <div class="article-container">
+          <div class="article-legend" id="article-legend">
+            <div style="font-weight: bold">범례</div>
+            <!-- <div class="legend">안녕하세요</div> -->
+          </div>
+          <div class="article-container-horizontal">
+            <div class="vertical-center">
+              <div class="axis-label" id="x-negative">안녕하다</div>
+            </div>
+            <div class="article-container-vertical">
+              <div class="axis-label" id="y-positive">대박이다</div>
+              <div class="article-inner" id="article-inner">
+                <svg id="axis"></svg>
+              </div>
+              <div class="axis-label" id="y-negative">쩐다</div>
+            </div>
+            <div class="vertical-center">
+              <div class="axis-label" id="x-positive">슬프다</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="edits">
+        <div class="edits-label">이름</div>
+        <div class="edits-label">
+          <input type="text" placeholder="노래 이름" id="label-name" />
+        </div>
+        <div class="edits-label">X</div>
+        <div class="edits-label">
+          <input
+            type="range"
+            min="-10"
+            max="10"
+            value="0"
+            step="0.01"
+            id="label-x"
+          />
+          <input
+            type="number"
+            min="-10"
+            max="10"
+            value="0"
+            step="0.01"
+            id="label-x-number"
+          />
+        </div>
+        <div class="edits-label">Y</div>
+        <div class="edits-label">
+          <input
+            type="range"
+            min="-10"
+            max="10"
+            value="0"
+            step="0.01"
+            id="label-y"
+          />
+          <input
+            type="number"
+            min="-10"
+            max="10"
+            value="0"
+            step="0.01"
+            id="label-y-number"
+          />
+        </div>
+        <div class="edits-label">색상</div>
+        <div class="edits-label">
+          <input
+            type="color"
+            min="-1"
+            max="1"
+            step="0.01"
+            placeholder="0.0"
+            id="label-color"
+          />
+        </div>
+        <div class="edits-label">
+          <button onclick="addLabel()">추가하기</button>
+        </div>
+        <div class="edits">
+          <div class="edits-label">폰트 크기</div>
+          <div class="edits-label">
+            <input
+              type="range"
+              min="8"
+              max="24"
+              value="24"
+              id="label-font-size"
+            />
+          </div>
+        </div>
+        <div class="edits">
+          <div class="edits-label">범례</div>
+          <div class="edits-label">
+            <input type="text" id="legend-name" placeholder="범례" />
+          </div>
+          <div class="edits-label">범례 색상</div>
+          <div class="edits-label">
+            <input type="color" id="legend-color" />
+          </div>
+          <div class="edits-label">
+            <button onclick="addLegend()">범례 추가</button>
+          </div>
+        </div>
+        <div class="edits">
+          <div class="edits-label">축 이름</div>
+          <div class="edits-label">오른쪽</div>
+          <div class="edits-label">
+            <input type="text" id="right-input" value="오른쪽" />
+          </div>
+          <div class="edits-label">왼쪽</div>
+          <div class="edits-label">
+            <input type="text" id="left-input" value="왼쪽" />
+          </div>
+          <div class="edits-label">위</div>
+          <div class="edits-label">
+            <input type="text" id="up-input" value="위" />
+          </div>
+          <div class="edits-label">아래</div>
+          <div class="edits-label">
+            <input type="text" id="down-input" value="아래" />
+          </div>
+        </div>
+        <div class="edits">
+          <div class="edits-label">중간 세이브</div>
+          <div>
+            <input type="file" onchange="load()" id="file" />
+          </div>
+          <div class="edits-label">
+            <button onclick="save()">저장하기</button>
+          </div>
+        </div>
+        <div class="edits">
+          <div class="edits-label">
+            <button onclick="capture()">화면 캡처</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

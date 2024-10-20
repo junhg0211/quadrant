@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: "Pretendard JP", "Pretendard", sans-serif;
+  background-color: #f7f7f9;
+}
+
+.main-container {
+  max-width: 100vw;
+  margin: auto;
+}
+
+.top-container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  height: calc(100vh - 80px);
+}
+
+.header-container {
+  text-align: center;
+  background-color: #f7f7f9;
+  padding: 16px 0;
+}
+
+.header {
+  font-weight: bold;
+  font-size: 52px;
+  background-color: #4fc2b8;
+  padding: 4px;
+  border-radius: 8px;
+  color: white;
+}
+
+.article-container {
+  background-color: #4fc2b8;
+  padding: 24px 0;
+  flex: 1;
+  display: flex;
+}
+
+.article-legend {
+  margin-left: 24px;
+  background-color: #f7f7f9;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.legend {
+  margin: 4px;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.article-container-horizontal {
+  flex: 1;
+  margin: 0 24px;
+  background-color: #f7f7f9;
+  border-radius: 12px;
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.article-container-vertical {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.axis-label {
+  background-color: #ffce00;
+  padding: 4px;
+  border-radius: 4px;
+  margin: 12px;
+  font-weight: bold;
+}
+
+.article-inner {
+  flex: 1;
+  width: 100%;
+}
+
+#axis {
+  width: 100%;
+  height: 100%;
+}
+
+#x-axis {
+  position: absolute;
+  border-right: 1px solid black;
+}
+
+#y-axis {
+  position: absolute;
+  border-top: 1px solid black;
+}
+
+.label {
+  position: absolute;
+  border-radius: 4px;
+  padding: 2px;
+  font-size: 12px;
+}
+
+.edits {
+  margin-top: 32px !important;
+  max-width: 480px;
+  margin: auto;
+  margin-bottom: 32px !important;
+}
+
+.edits-label {
+  margin-top: 12px;
+}
+
+.edits input,
+.edits button {
+  padding: 8px;
+  background-color: white;
+  border-radius: 1000px;
+  border: none;
+  outline: none;
+}
+
+.edits input[type="text"],
+.edits input[type="number"],
+.edits input[type="range"] {
+  width: calc(100% - 16px);
+}
+
+.edits input[type="color"] {
+  width: 100%;
+  height: 36px;
+}
